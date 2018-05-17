@@ -95,6 +95,12 @@ geom_point()+
 geom_smooth(method = lm , se=FALSE)+
 labs(x="Esperanza de años de vida al nacer" , y="Años" , title="Gráfico de Dispersión y Recta de Regresión de la Esperanza de Vida",colour= "Continentes", caption= "Se puede ver claramente que hay una mejor esperanza de vida con el pasar del tiempo.")
 ```
+\fbox{\begin{minipage}{48em}
+para que salga bien el caption es preferible ponerlo en el chunck de código con fig.cap="".
+Los ejes x e y deben ser al revés  pero posiblemente no viste la versión corregida de la tarea donde estaba arreglado esto. Ver sol para interpretación, agregar comparación entre continentes.
+
+\end{minipage}}
+
 
 #2.
 
@@ -105,6 +111,10 @@ labs(x="Esperanza de años de vida al nacer" , y="Años" , title="Gráfico de Di
 ```
 
 Esto sucede porque geom_smooth esta vinculado a los datos de las variables previamente dados por el aes.
+
+\fbox{\begin{minipage}{48em}
+Bien. Ver sol. para entender mejor
+\end{minipage}}
 
 #3.
 
@@ -119,6 +129,10 @@ labs(x="PIB per Cápita en Dolares" , y= "Esperanza de años de vida al nacer" ,
      con Asia ya que tiene alto PIB per cápita pero poca esperanza de vida.")
 ```
 
+\fbox{\begin{minipage}{48em}
+Agregar el fig.cap como en los anteriores con el nombre y descripción del gráfico. Corregir ortografía. No es necesario agregar continente con distinto color ya que esa variable está incluída en `facet\_wrap` y no hace más sencilla la visualización, tampoco está mal incluirlo.
+\end{minipage}}
+
 #4.
 
 ```{r}
@@ -126,10 +140,15 @@ ggplot(data= gapminder, aes(x=year,y=gdpPercap, group=country,colour=continent))
 geom_line()+
 facet_wrap(~continent)+
 labs(x="Años",y="PIB per Cápita en Dolares", colour= "Continentes", title="Grafico de Lineas del PIB per Cápita en el tiempo" , caption="Se puede ver que todos los continentes tienen un PIB
-     per Cápita creciente con el transcurrir del tiempo, 
+     per Cápita creciente con el transcurrir del tiempo,
      no obstante se puede ver una caida abruta por parte de Asia.")
 
 ```
+
+\fbox{\begin{minipage}{48em}
+Agregar el fig.cap como en los anteriores. Corregir ortografía. No es necesario agregar continente con distinto color ya que esa variable está incluída en `facet\_wrap` y no hace más sencilla la visualización, tampoco está mal.
+incluirlo. "ver una caida abruta por parte de Asia" no es de Asia sino de un pa'is de Asia.
+\end{minipage}}
 
 #5.
 ```{r}
@@ -138,12 +157,22 @@ geom_point()+
 facet_wrap(~continent)+
 labs(x="Población" , y= "Años" , colour= "Continentes", title="Gráficos de Dispersión de la población", caption= "Se puede ver un crecimiento constante
      de la poblacion al pasar de los años a pesar de que algunos continentes
-     tienen esperanza de vida muy baja como africa 
+     tienen esperanza de vida muy baja como africa
      se mantiene su poblacion y aun sige aumentado, esto se puede dar a los avances
-     teconologico y que ahora pueden gozar de mejor esperanza de vida. Tambien cabe recalcar 
+     teconologico y que ahora pueden gozar de mejor esperanza de vida. Tambien cabe recalcar
      que tanto como Europa y Oceania no tubieron cambios significativos en la poblacion se
      mantuvo igual mientras que las America y Asia han crecido en poblacion.")
 ```
 
 
 
+\fbox{\begin{minipage}{48em}
+En este caso tiene sentido revertir los ejes, además agregaría lineas
+\end{minipage}}
+
+
+
+\fbox{\begin{minipage}{48em}
+Buen trabajo, mejorar la escritura (faltas), trabajar con la interpretación y los comentarios de las figuras. Intentar usar fig.cap para que salgan las figuras numeradas y no cortados
+PUNTOS: 85/100
+\end{minipage}}
